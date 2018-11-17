@@ -1,0 +1,15 @@
+// MIR for `main`
+// source = MirSource { def_id: DefId(0/0:4 ~ mir_example[317d]::main[0]), promoted: Some(promoted[4]) }
+// pass_name = NoLandingPads
+// disambiguator = before
+
+promoted[4] in main: ComparisonResult ={
+    let mut _0: ComparisonResult;        // return place
+    let mut _1: ComparisonResult;
+
+    bb0: {                              
+        _1 = ComparisonResult::Smaller;  // bb0[0]: scope 0 at mir-example.rs:19:25: 19:50
+        _0 = move _1;                    // bb0[1]: scope 0 at mir-example.rs:19:25: 19:50
+        return;                          // bb0[2]: scope 0 at mir-example.rs:19:25: 19:50
+    }
+}

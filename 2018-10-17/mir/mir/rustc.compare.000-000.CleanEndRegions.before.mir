@@ -1,0 +1,71 @@
+// MIR for `compare`
+// source = MirSource { def_id: DefId(0/0:3 ~ mir_example[317d]::compare[0]), promoted: None }
+// pass_name = CleanEndRegions
+// disambiguator = before
+
+fn compare(_1: u32, _2: u32) -> ComparisonResult{
+    let mut _0: ComparisonResult;        // return place
+    let mut _3: bool;
+    let mut _4: u32;
+    let mut _5: u32;
+    let mut _6: bool;
+    let mut _7: u32;
+    let mut _8: u32;
+
+    bb0: {                              
+        StorageLive(_3);                 // bb0[0]: scope 0 at mir-example.rs:9:6: 9:11
+        StorageLive(_4);                 // bb0[1]: scope 0 at mir-example.rs:9:6: 9:7
+        _4 = _1;                         // bb0[2]: scope 0 at mir-example.rs:9:6: 9:7
+        StorageLive(_5);                 // bb0[3]: scope 0 at mir-example.rs:9:10: 9:11
+        _5 = _2;                         // bb0[4]: scope 0 at mir-example.rs:9:10: 9:11
+        _3 = Lt(move _4, move _5);       // bb0[5]: scope 0 at mir-example.rs:9:6: 9:11
+        StorageDead(_5);                 // bb0[6]: scope 0 at mir-example.rs:9:10: 9:11
+        StorageDead(_4);                 // bb0[7]: scope 0 at mir-example.rs:9:10: 9:11
+        switchInt(move _3) -> [false: bb3, otherwise: bb2]; // bb0[8]: scope 0 at mir-example.rs:9:3: 15:4
+    }
+
+    bb1: {                               // cleanup
+        resume;                          // bb1[0]: scope 0 at mir-example.rs:8:1: 16:2
+    }
+
+    bb2: {                              
+        _0 = ComparisonResult::Smaller;  // bb2[0]: scope 0 at mir-example.rs:10:5: 10:30
+        goto -> bb7;                     // bb2[1]: scope 0 at mir-example.rs:9:3: 15:4
+    }
+
+    bb3: {                              
+        StorageLive(_6);                 // bb3[0]: scope 0 at mir-example.rs:11:13: 11:19
+        StorageLive(_7);                 // bb3[1]: scope 0 at mir-example.rs:11:13: 11:14
+        _7 = _1;                         // bb3[2]: scope 0 at mir-example.rs:11:13: 11:14
+        StorageLive(_8);                 // bb3[3]: scope 0 at mir-example.rs:11:18: 11:19
+        _8 = _2;                         // bb3[4]: scope 0 at mir-example.rs:11:18: 11:19
+        _6 = Eq(move _7, move _8);       // bb3[5]: scope 0 at mir-example.rs:11:13: 11:19
+        StorageDead(_8);                 // bb3[6]: scope 0 at mir-example.rs:11:18: 11:19
+        StorageDead(_7);                 // bb3[7]: scope 0 at mir-example.rs:11:18: 11:19
+        switchInt(move _6) -> [false: bb5, otherwise: bb4]; // bb3[8]: scope 0 at mir-example.rs:11:10: 15:4
+    }
+
+    bb4: {                              
+        _0 = ComparisonResult::Equal;    // bb4[0]: scope 0 at mir-example.rs:12:5: 12:28
+        goto -> bb6;                     // bb4[1]: scope 0 at mir-example.rs:11:10: 15:4
+    }
+
+    bb5: {                              
+        _0 = ComparisonResult::Bigger;   // bb5[0]: scope 0 at mir-example.rs:14:5: 14:29
+        goto -> bb6;                     // bb5[1]: scope 0 at mir-example.rs:11:10: 15:4
+    }
+
+    bb6: {                              
+        StorageDead(_6);                 // bb6[0]: scope 0 at mir-example.rs:15:3: 15:4
+        goto -> bb7;                     // bb6[1]: scope 0 at mir-example.rs:9:3: 15:4
+    }
+
+    bb7: {                              
+        StorageDead(_3);                 // bb7[0]: scope 0 at mir-example.rs:15:3: 15:4
+        goto -> bb8;                     // bb7[1]: scope 0 at mir-example.rs:16:2: 16:2
+    }
+
+    bb8: {                              
+        return;                          // bb8[0]: scope 0 at mir-example.rs:16:2: 16:2
+    }
+}

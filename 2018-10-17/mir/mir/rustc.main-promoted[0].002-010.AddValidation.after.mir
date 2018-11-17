@@ -1,0 +1,19 @@
+// MIR for `main`
+// source = MirSource { def_id: DefId(0/0:4 ~ mir_example[317d]::main[0]), promoted: Some(promoted[0]) }
+// pass_name = AddValidation
+// disambiguator = after
+
+promoted[0] in main: [std::fmt::ArgumentV1<'_>; 0] ={
+    let mut _0: [std::fmt::ArgumentV1<'_>; 0]; // return place
+    let mut _1: [std::fmt::ArgumentV1<'_>; 0];
+
+    bb0: {                              
+        _1 = [];                         // bb0[0]: scope 0 at mir-example.rs:22:18: 22:43
+        _0 = move _1;                    // bb0[1]: scope 0 at mir-example.rs:22:18: 22:43
+        return;                          // bb0[2]: scope 0 at mir-example.rs:22:18: 22:43
+    }
+
+    bb1: {                               // cleanup
+        resume;                          // bb1[0]: scope 0 at mir-example.rs:22:18: 22:43
+    }
+}

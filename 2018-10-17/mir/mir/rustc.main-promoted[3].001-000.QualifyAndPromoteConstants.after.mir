@@ -1,0 +1,26 @@
+// MIR for `main`
+// source = MirSource { def_id: DefId(0/0:4 ~ mir_example[317d]::main[0]), promoted: Some(promoted[3]) }
+// pass_name = QualifyAndPromoteConstants
+// disambiguator = after
+
+promoted[3] in main: [&str; 1] ={
+    let mut _0: [&str; 1];               // return place
+    let mut _1: [&str; 1];
+    let mut _2: &str;
+    let mut _3: &'static str;
+
+    bb0: {                              
+        _3 = const "Science works!\n";   // bb0[0]: scope 0 at mir-example.rs:20:18: 20:34
+                                         // ty::Const
+                                         // + ty: &'static str
+                                         // + val: ScalarPair(Ptr(Pointer { alloc_id: AllocId(0), offset: Size { raw: 0 }, tag: () }), Bits { size: 8, bits: 15 })
+                                         // mir::Constant
+                                         // + span: mir-example.rs:20:18: 20:34
+                                         // + ty: &'static str
+                                         // + literal: Const { ty: &'static str, val: ScalarPair(Ptr(Pointer { alloc_id: AllocId(0), offset: Size { raw: 0 }, tag: () }), Bits { size: 8, bits: 15 }) }
+        _2 = &(*_3);                     // bb0[1]: scope 0 at mir-example.rs:20:18: 20:34
+        _1 = [move _2];                  // bb0[2]: scope 0 at mir-example.rs:20:18: 20:34
+        _0 = move _1;                    // bb0[3]: scope 0 at mir-example.rs:20:18: 20:34
+        return;                          // bb0[4]: scope 0 at mir-example.rs:20:18: 20:34
+    }
+}

@@ -1,0 +1,197 @@
+// MIR for `main`
+// source = MirSource { def_id: DefId(0/0:4 ~ mir_example[317d]::main[0]), promoted: None }
+// pass_name = EraseRegions
+// disambiguator = after
+
+fn main() -> (){
+    let mut _0: ();                      // return place
+    let mut _1: bool;
+    let mut _2: &ComparisonResult;
+    let _3: ComparisonResult;
+    let mut _4: &ComparisonResult;
+    let _5: ComparisonResult;
+    let mut _6: ();
+    let mut _7: ();
+    let mut _8: std::fmt::Arguments;
+    let mut _9: &[&str];
+    let mut _10: &[&str; 1];
+    let mut _11: &[&str; 1];
+    let _12: [&str; 1];
+    let mut _13: &str;
+    let mut _14: &str;
+    let mut _15: &[std::fmt::ArgumentV1];
+    let mut _16: &[std::fmt::ArgumentV1; 0];
+    let mut _17: &[std::fmt::ArgumentV1; 0];
+    let _18: [std::fmt::ArgumentV1; 0];
+    let mut _19: ();
+    let mut _20: ();
+    let mut _21: ();
+    let mut _22: std::fmt::Arguments;
+    let mut _23: &[&str];
+    let mut _24: &[&str; 1];
+    let mut _25: &[&str; 1];
+    let _26: [&str; 1];
+    let mut _27: &str;
+    let mut _28: &str;
+    let mut _29: &[std::fmt::ArgumentV1];
+    let mut _30: &[std::fmt::ArgumentV1; 0];
+    let mut _31: &[std::fmt::ArgumentV1; 0];
+    let _32: [std::fmt::ArgumentV1; 0];
+    let mut _33: ();
+
+    bb0: {                              
+        StorageLive(_1);                 // bb0[0]: scope 0 at mir-example.rs:19:8: 19:50
+        StorageLive(_2);                 // bb0[1]: scope 0 at mir-example.rs:19:8: 19:21
+        StorageLive(_3);                 // bb0[2]: scope 0 at mir-example.rs:19:8: 19:21
+        _3 = const compare(const 2u32, const 3u32) -> bb1; // bb0[3]: scope 0 at mir-example.rs:19:8: 19:21
+                                         // ty::Const
+                                         // + ty: fn(u32, u32) -> ComparisonResult {compare}
+                                         // + val: Scalar(Bits { size: 0, bits: 0 })
+                                         // mir::Constant
+                                         // + span: mir-example.rs:19:8: 19:15
+                                         // + ty: fn(u32, u32) -> ComparisonResult {compare}
+                                         // + literal: Const { ty: fn(u32, u32) -> ComparisonResult {compare}, val: Scalar(Bits { size: 0, bits: 0 }) }
+                                         // ty::Const
+                                         // + ty: u32
+                                         // + val: Scalar(Bits { size: 4, bits: 2 })
+                                         // mir::Constant
+                                         // + span: mir-example.rs:19:16: 19:17
+                                         // + ty: u32
+                                         // + literal: Const { ty: u32, val: Scalar(Bits { size: 4, bits: 2 }) }
+                                         // ty::Const
+                                         // + ty: u32
+                                         // + val: Scalar(Bits { size: 4, bits: 3 })
+                                         // mir::Constant
+                                         // + span: mir-example.rs:19:19: 19:20
+                                         // + ty: u32
+                                         // + literal: Const { ty: u32, val: Scalar(Bits { size: 4, bits: 3 }) }
+    }
+
+    bb1: {                              
+        _2 = &_3;                        // bb1[0]: scope 0 at mir-example.rs:19:8: 19:21
+        StorageLive(_4);                 // bb1[1]: scope 0 at mir-example.rs:19:25: 19:50
+        _4 = &(promoted[4]: ComparisonResult); // bb1[2]: scope 0 at mir-example.rs:19:25: 19:50
+        _1 = const std::cmp::PartialEq::eq(move _2, move _4) -> bb2; // bb1[3]: scope 0 at mir-example.rs:19:8: 19:50
+                                         // ty::Const
+                                         // + ty: for<'r, 's> fn(&'r ComparisonResult, &'s ComparisonResult) -> bool {<ComparisonResult as std::cmp::PartialEq>::eq}
+                                         // + val: Scalar(Bits { size: 0, bits: 0 })
+                                         // mir::Constant
+                                         // + span: mir-example.rs:19:8: 19:50
+                                         // + ty: for<'r, 's> fn(&'r ComparisonResult, &'s ComparisonResult) -> bool {<ComparisonResult as std::cmp::PartialEq>::eq}
+                                         // + literal: Const { ty: for<'r, 's> fn(&'r ComparisonResult, &'s ComparisonResult) -> bool {<ComparisonResult as std::cmp::PartialEq>::eq}, val: Scalar(Bits { size: 0, bits: 0 }) }
+    }
+
+    bb2: {                              
+        StorageDead(_4);                 // bb2[0]: scope 0 at mir-example.rs:19:49: 19:50
+        StorageDead(_2);                 // bb2[1]: scope 0 at mir-example.rs:19:49: 19:50
+        StorageDead(_3);                 // bb2[2]: scope 0 at mir-example.rs:19:49: 19:50
+        switchInt(move _1) -> [false: bb4, otherwise: bb3]; // bb2[3]: scope 0 at mir-example.rs:19:5: 23:6
+    }
+
+    bb3: {                              
+        StorageLive(_8);                 // bb3[0]: scope 0 at <::std::macros::println macros>:2:29: 2:63
+        StorageLive(_9);                 // bb3[1]: scope 0 at mir-example.rs:20:18: 20:34
+        StorageLive(_10);                // bb3[2]: scope 0 at mir-example.rs:20:18: 20:34
+        StorageLive(_11);                // bb3[3]: scope 0 at mir-example.rs:20:18: 20:34
+        _11 = &(promoted[3]: [&str; 1]); // bb3[4]: scope 0 at mir-example.rs:20:18: 20:34
+        _10 = &(*_11);                   // bb3[5]: scope 0 at mir-example.rs:20:18: 20:34
+        _9 = move _10 as &[&str] (Unsize); // bb3[6]: scope 0 at mir-example.rs:20:18: 20:34
+        StorageDead(_10);                // bb3[7]: scope 0 at mir-example.rs:20:33: 20:34
+        StorageLive(_15);                // bb3[8]: scope 0 at mir-example.rs:20:18: 20:34
+        StorageLive(_16);                // bb3[9]: scope 0 at mir-example.rs:20:18: 20:34
+        StorageLive(_17);                // bb3[10]: scope 0 at mir-example.rs:20:18: 20:34
+        StorageLive(_19);                // bb3[11]: scope 0 at mir-example.rs:20:18: 20:34
+        _19 = ();                        // bb3[12]: scope 0 at mir-example.rs:20:18: 20:34
+        _17 = &(promoted[2]: [std::fmt::ArgumentV1; 0]); // bb3[13]: scope 0 at mir-example.rs:20:18: 20:34
+        _16 = &(*_17);                   // bb3[14]: scope 0 at mir-example.rs:20:18: 20:34
+        _15 = move _16 as &[std::fmt::ArgumentV1] (Unsize); // bb3[15]: scope 0 at mir-example.rs:20:18: 20:34
+        StorageDead(_16);                // bb3[16]: scope 0 at mir-example.rs:20:33: 20:34
+        _8 = const std::fmt::Arguments::new_v1(move _9, move _15) -> bb5; // bb3[17]: scope 0 at <::std::macros::println macros>:2:29: 2:63
+                                         // ty::Const
+                                         // + ty: fn(&[&str], &[std::fmt::ArgumentV1]) -> std::fmt::Arguments {std::fmt::Arguments::new_v1}
+                                         // + val: Scalar(Bits { size: 0, bits: 0 })
+                                         // mir::Constant
+                                         // + span: <::std::macros::println macros>:2:29: 2:63
+                                         // + ty: fn(&[&str], &[std::fmt::ArgumentV1]) -> std::fmt::Arguments {std::fmt::Arguments::new_v1}
+                                         // + literal: Const { ty: fn(&[&str], &[std::fmt::ArgumentV1]) -> std::fmt::Arguments {std::fmt::Arguments::new_v1}, val: Scalar(Bits { size: 0, bits: 0 }) }
+    }
+
+    bb4: {                              
+        StorageLive(_22);                // bb4[0]: scope 0 at <::std::macros::println macros>:2:29: 2:63
+        StorageLive(_23);                // bb4[1]: scope 0 at mir-example.rs:22:18: 22:43
+        StorageLive(_24);                // bb4[2]: scope 0 at mir-example.rs:22:18: 22:43
+        StorageLive(_25);                // bb4[3]: scope 0 at mir-example.rs:22:18: 22:43
+        _25 = &(promoted[1]: [&str; 1]); // bb4[4]: scope 0 at mir-example.rs:22:18: 22:43
+        _24 = &(*_25);                   // bb4[5]: scope 0 at mir-example.rs:22:18: 22:43
+        _23 = move _24 as &[&str] (Unsize); // bb4[6]: scope 0 at mir-example.rs:22:18: 22:43
+        StorageDead(_24);                // bb4[7]: scope 0 at mir-example.rs:22:42: 22:43
+        StorageLive(_29);                // bb4[8]: scope 0 at mir-example.rs:22:18: 22:43
+        StorageLive(_30);                // bb4[9]: scope 0 at mir-example.rs:22:18: 22:43
+        StorageLive(_31);                // bb4[10]: scope 0 at mir-example.rs:22:18: 22:43
+        StorageLive(_33);                // bb4[11]: scope 0 at mir-example.rs:22:18: 22:43
+        _33 = ();                        // bb4[12]: scope 0 at mir-example.rs:22:18: 22:43
+        _31 = &(promoted[0]: [std::fmt::ArgumentV1; 0]); // bb4[13]: scope 0 at mir-example.rs:22:18: 22:43
+        _30 = &(*_31);                   // bb4[14]: scope 0 at mir-example.rs:22:18: 22:43
+        _29 = move _30 as &[std::fmt::ArgumentV1] (Unsize); // bb4[15]: scope 0 at mir-example.rs:22:18: 22:43
+        StorageDead(_30);                // bb4[16]: scope 0 at mir-example.rs:22:42: 22:43
+        _22 = const std::fmt::Arguments::new_v1(move _23, move _29) -> bb7; // bb4[17]: scope 0 at <::std::macros::println macros>:2:29: 2:63
+                                         // ty::Const
+                                         // + ty: fn(&[&str], &[std::fmt::ArgumentV1]) -> std::fmt::Arguments {std::fmt::Arguments::new_v1}
+                                         // + val: Scalar(Bits { size: 0, bits: 0 })
+                                         // mir::Constant
+                                         // + span: <::std::macros::println macros>:2:29: 2:63
+                                         // + ty: fn(&[&str], &[std::fmt::ArgumentV1]) -> std::fmt::Arguments {std::fmt::Arguments::new_v1}
+                                         // + literal: Const { ty: fn(&[&str], &[std::fmt::ArgumentV1]) -> std::fmt::Arguments {std::fmt::Arguments::new_v1}, val: Scalar(Bits { size: 0, bits: 0 }) }
+    }
+
+    bb5: {                              
+        StorageDead(_15);                // bb5[0]: scope 0 at <::std::macros::println macros>:2:62: 2:63
+        StorageDead(_9);                 // bb5[1]: scope 0 at <::std::macros::println macros>:2:62: 2:63
+        _7 = const std::io::_print(move _8) -> bb6; // bb5[2]: scope 0 at <::std::macros::println macros>:2:3: 2:65
+                                         // ty::Const
+                                         // + ty: for<'r> fn(std::fmt::Arguments<'r>) {std::io::_print}
+                                         // + val: Scalar(Bits { size: 0, bits: 0 })
+                                         // mir::Constant
+                                         // + span: <::std::macros::println macros>:2:3: 2:26
+                                         // + ty: for<'r> fn(std::fmt::Arguments<'r>) {std::io::_print}
+                                         // + literal: Const { ty: for<'r> fn(std::fmt::Arguments<'r>) {std::io::_print}, val: Scalar(Bits { size: 0, bits: 0 }) }
+    }
+
+    bb6: {                              
+        StorageDead(_8);                 // bb6[0]: scope 0 at <::std::macros::println macros>:2:64: 2:65
+        StorageDead(_17);                // bb6[1]: scope 0 at <::std::macros::println macros>:2:66: 2:67
+        StorageDead(_19);                // bb6[2]: scope 0 at <::std::macros::println macros>:2:66: 2:67
+        StorageDead(_11);                // bb6[3]: scope 0 at <::std::macros::println macros>:2:66: 2:67
+        _6 = ();                         // bb6[4]: scope 0 at <::std::macros::println macros>:2:1: 2:69
+        _0 = ();                         // bb6[5]: scope 0 at mir-example.rs:19:51: 21:6
+        goto -> bb9;                     // bb6[6]: scope 0 at mir-example.rs:19:5: 23:6
+    }
+
+    bb7: {                              
+        StorageDead(_29);                // bb7[0]: scope 0 at <::std::macros::println macros>:2:62: 2:63
+        StorageDead(_23);                // bb7[1]: scope 0 at <::std::macros::println macros>:2:62: 2:63
+        _21 = const std::io::_print(move _22) -> bb8; // bb7[2]: scope 0 at <::std::macros::println macros>:2:3: 2:65
+                                         // ty::Const
+                                         // + ty: for<'r> fn(std::fmt::Arguments<'r>) {std::io::_print}
+                                         // + val: Scalar(Bits { size: 0, bits: 0 })
+                                         // mir::Constant
+                                         // + span: <::std::macros::println macros>:2:3: 2:26
+                                         // + ty: for<'r> fn(std::fmt::Arguments<'r>) {std::io::_print}
+                                         // + literal: Const { ty: for<'r> fn(std::fmt::Arguments<'r>) {std::io::_print}, val: Scalar(Bits { size: 0, bits: 0 }) }
+    }
+
+    bb8: {                              
+        StorageDead(_22);                // bb8[0]: scope 0 at <::std::macros::println macros>:2:64: 2:65
+        StorageDead(_31);                // bb8[1]: scope 0 at <::std::macros::println macros>:2:66: 2:67
+        StorageDead(_33);                // bb8[2]: scope 0 at <::std::macros::println macros>:2:66: 2:67
+        StorageDead(_25);                // bb8[3]: scope 0 at <::std::macros::println macros>:2:66: 2:67
+        _20 = ();                        // bb8[4]: scope 0 at <::std::macros::println macros>:2:1: 2:69
+        _0 = ();                         // bb8[5]: scope 0 at mir-example.rs:21:12: 23:6
+        goto -> bb9;                     // bb8[6]: scope 0 at mir-example.rs:19:5: 23:6
+    }
+
+    bb9: {                              
+        StorageDead(_1);                 // bb9[0]: scope 0 at mir-example.rs:23:5: 23:6
+        return;                          // bb9[1]: scope 0 at mir-example.rs:24:2: 24:2
+    }
+}

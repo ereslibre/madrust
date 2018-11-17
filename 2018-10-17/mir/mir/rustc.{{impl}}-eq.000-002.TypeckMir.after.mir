@@ -1,0 +1,185 @@
+// MIR for `<impl at mir-example.rs:1:10: 1:19>::eq`
+// source = MirSource { def_id: DefId(0/0:7 ~ mir_example[317d]::{{impl}}[0]::eq[0]), promoted: None }
+// pass_name = TypeckMir
+// disambiguator = after
+
+fn <impl at mir-example.rs:1:10: 1:19>::eq(_1: &ComparisonResult, _2: &ComparisonResult) -> bool{
+    let mut _0: bool;                    // return place
+    scope 1 {
+        scope 4 {
+        }
+        scope 5 {
+            let _7: isize;               // "__arg_1_vi" in scope 5 at mir-example.rs:1:10: 1:19
+        }
+        scope 6 {
+        }
+    }
+    scope 2 {
+        let _3: isize;                   // "__self_vi" in scope 2 at mir-example.rs:1:10: 1:19
+    }
+    scope 3 {
+    }
+    let mut _4: u64;
+    let mut _5: &ComparisonResult;
+    let mut _6: &ComparisonResult;
+    let mut _8: u64;
+    let mut _9: &ComparisonResult;
+    let mut _10: &ComparisonResult;
+    let mut _11: bool;
+    let mut _12: bool;
+    let mut _13: isize;
+    let mut _14: isize;
+    let mut _15: (&ComparisonResult, &ComparisonResult);
+    let mut _16: &ComparisonResult;
+    let mut _17: &ComparisonResult;
+
+    bb0: {                              
+        StorageLive(_3);                 // bb0[0]: scope 0 at mir-example.rs:1:10: 1:19
+        StorageLive(_4);                 // bb0[1]: scope 0 at mir-example.rs:1:10: 1:19
+        StorageLive(_5);                 // bb0[2]: scope 3 at mir-example.rs:1:10: 1:19
+        StorageLive(_6);                 // bb0[3]: scope 3 at mir-example.rs:1:10: 1:19
+        _6 = &(*_1);                     // bb0[4]: scope 3 at mir-example.rs:1:10: 1:19
+        _5 = &(*_6);                     // bb0[5]: scope 3 at mir-example.rs:1:10: 1:19
+        _4 = const std::intrinsics::discriminant_value(move _5) -> [return: bb2, unwind: bb1]; // bb0[6]: scope 3 at mir-example.rs:1:10: 1:19
+                                         // ty::Const
+                                         // + ty: for<'r> unsafe extern "rust-intrinsic" fn(&'r ComparisonResult) -> u64 {std::intrinsics::discriminant_value::<ComparisonResult>}
+                                         // + val: Scalar(Bits { size: 0, bits: 0 })
+                                         // mir::Constant
+                                         // + span: mir-example.rs:1:10: 1:19
+                                         // + ty: for<'r> unsafe extern "rust-intrinsic" fn(&'r ComparisonResult) -> u64 {std::intrinsics::discriminant_value::<ComparisonResult>}
+                                         // + literal: Const { ty: for<'r> unsafe extern "rust-intrinsic" fn(&'r ComparisonResult) -> u64 {std::intrinsics::discriminant_value::<ComparisonResult>}, val: Scalar(Bits { size: 0, bits: 0 }) }
+    }
+
+    bb1: {                               // cleanup
+        resume;                          // bb1[0]: scope 0 at mir-example.rs:1:10: 1:19
+    }
+
+    bb2: {                              
+        StorageDead(_5);                 // bb2[0]: scope 3 at mir-example.rs:1:18: 1:19
+        _3 = move _4 as isize (Misc);    // bb2[1]: scope 0 at mir-example.rs:1:10: 1:19
+        StorageDead(_4);                 // bb2[2]: scope 0 at mir-example.rs:1:18: 1:19
+        FakeRead(ForLet, _3);            // bb2[3]: scope 0 at mir-example.rs:1:10: 1:19
+        StorageDead(_6);                 // bb2[4]: scope 0 at mir-example.rs:1:18: 1:19
+        StorageLive(_7);                 // bb2[5]: scope 1 at mir-example.rs:1:10: 1:19
+        StorageLive(_8);                 // bb2[6]: scope 1 at mir-example.rs:1:10: 1:19
+        StorageLive(_9);                 // bb2[7]: scope 6 at mir-example.rs:1:10: 1:19
+        StorageLive(_10);                // bb2[8]: scope 6 at mir-example.rs:1:10: 1:19
+        _10 = &(*_2);                    // bb2[9]: scope 6 at mir-example.rs:1:10: 1:19
+        _9 = &(*_10);                    // bb2[10]: scope 6 at mir-example.rs:1:10: 1:19
+        _8 = const std::intrinsics::discriminant_value(move _9) -> [return: bb3, unwind: bb1]; // bb2[11]: scope 6 at mir-example.rs:1:10: 1:19
+                                         // ty::Const
+                                         // + ty: for<'r> unsafe extern "rust-intrinsic" fn(&'r ComparisonResult) -> u64 {std::intrinsics::discriminant_value::<ComparisonResult>}
+                                         // + val: Scalar(Bits { size: 0, bits: 0 })
+                                         // mir::Constant
+                                         // + span: mir-example.rs:1:10: 1:19
+                                         // + ty: for<'r> unsafe extern "rust-intrinsic" fn(&'r ComparisonResult) -> u64 {std::intrinsics::discriminant_value::<ComparisonResult>}
+                                         // + literal: Const { ty: for<'r> unsafe extern "rust-intrinsic" fn(&'r ComparisonResult) -> u64 {std::intrinsics::discriminant_value::<ComparisonResult>}, val: Scalar(Bits { size: 0, bits: 0 }) }
+    }
+
+    bb3: {                              
+        StorageDead(_9);                 // bb3[0]: scope 6 at mir-example.rs:1:18: 1:19
+        _7 = move _8 as isize (Misc);    // bb3[1]: scope 1 at mir-example.rs:1:10: 1:19
+        StorageDead(_8);                 // bb3[2]: scope 1 at mir-example.rs:1:18: 1:19
+        FakeRead(ForLet, _7);            // bb3[3]: scope 1 at mir-example.rs:1:10: 1:19
+        StorageDead(_10);                // bb3[4]: scope 1 at mir-example.rs:1:18: 1:19
+        StorageLive(_11);                // bb3[5]: scope 4 at mir-example.rs:1:10: 1:19
+        switchInt(const true) -> [false: bb5, otherwise: bb6]; // bb3[6]: scope 4 at mir-example.rs:1:10: 1:19
+                                         // ty::Const
+                                         // + ty: bool
+                                         // + val: Scalar(Bits { size: 1, bits: 1 })
+                                         // mir::Constant
+                                         // + span: mir-example.rs:1:10: 1:19
+                                         // + ty: bool
+                                         // + literal: Const { ty: bool, val: Scalar(Bits { size: 1, bits: 1 }) }
+    }
+
+    bb4: {                              
+        _11 = const true;                // bb4[0]: scope 4 at mir-example.rs:1:10: 1:19
+                                         // ty::Const
+                                         // + ty: bool
+                                         // + val: Scalar(Bits { size: 1, bits: 1 })
+                                         // mir::Constant
+                                         // + span: mir-example.rs:1:10: 1:19
+                                         // + ty: bool
+                                         // + literal: Const { ty: bool, val: Scalar(Bits { size: 1, bits: 1 }) }
+        goto -> bb7;                     // bb4[1]: scope 4 at mir-example.rs:1:10: 1:19
+    }
+
+    bb5: {                              
+        _11 = const false;               // bb5[0]: scope 4 at mir-example.rs:1:10: 1:19
+                                         // ty::Const
+                                         // + ty: bool
+                                         // + val: Scalar(Bits { size: 1, bits: 0 })
+                                         // mir::Constant
+                                         // + span: mir-example.rs:1:10: 1:19
+                                         // + ty: bool
+                                         // + literal: Const { ty: bool, val: Scalar(Bits { size: 1, bits: 0 }) }
+        goto -> bb7;                     // bb5[1]: scope 4 at mir-example.rs:1:10: 1:19
+    }
+
+    bb6: {                              
+        StorageLive(_12);                // bb6[0]: scope 4 at mir-example.rs:1:10: 1:19
+        StorageLive(_13);                // bb6[1]: scope 4 at mir-example.rs:1:10: 1:19
+        _13 = _3;                        // bb6[2]: scope 4 at mir-example.rs:1:10: 1:19
+        StorageLive(_14);                // bb6[3]: scope 4 at mir-example.rs:1:10: 1:19
+        _14 = _7;                        // bb6[4]: scope 4 at mir-example.rs:1:10: 1:19
+        _12 = Eq(move _13, move _14);    // bb6[5]: scope 4 at mir-example.rs:1:10: 1:19
+        StorageDead(_14);                // bb6[6]: scope 4 at mir-example.rs:1:18: 1:19
+        StorageDead(_13);                // bb6[7]: scope 4 at mir-example.rs:1:18: 1:19
+        switchInt(move _12) -> [false: bb5, otherwise: bb4]; // bb6[8]: scope 4 at mir-example.rs:1:10: 1:19
+    }
+
+    bb7: {                              
+        StorageDead(_12);                // bb7[0]: scope 4 at mir-example.rs:1:18: 1:19
+        switchInt(move _11) -> [false: bb9, otherwise: bb8]; // bb7[1]: scope 4 at mir-example.rs:1:10: 1:19
+    }
+
+    bb8: {                              
+        StorageLive(_15);                // bb8[0]: scope 4 at mir-example.rs:1:10: 1:19
+        StorageLive(_16);                // bb8[1]: scope 4 at mir-example.rs:1:10: 1:19
+        _16 = &(*_1);                    // bb8[2]: scope 4 at mir-example.rs:1:10: 1:19
+        StorageLive(_17);                // bb8[3]: scope 4 at mir-example.rs:1:10: 1:19
+        _17 = &(*_2);                    // bb8[4]: scope 4 at mir-example.rs:1:10: 1:19
+        _15 = (move _16, move _17);      // bb8[5]: scope 4 at mir-example.rs:1:10: 1:19
+        StorageDead(_17);                // bb8[6]: scope 4 at mir-example.rs:1:18: 1:19
+        StorageDead(_16);                // bb8[7]: scope 4 at mir-example.rs:1:18: 1:19
+        FakeRead(ForMatchedPlace, _15);  // bb8[8]: scope 4 at mir-example.rs:1:10: 1:19
+        falseEdges -> [real: bb11, imaginary: bb10]; // bb8[9]: scope 4 at mir-example.rs:1:10: 1:19
+    }
+
+    bb9: {                              
+        _0 = const false;                // bb9[0]: scope 4 at mir-example.rs:1:10: 1:19
+                                         // ty::Const
+                                         // + ty: bool
+                                         // + val: Scalar(Bits { size: 1, bits: 0 })
+                                         // mir::Constant
+                                         // + span: mir-example.rs:1:10: 1:19
+                                         // + ty: bool
+                                         // + literal: Const { ty: bool, val: Scalar(Bits { size: 1, bits: 0 }) }
+        goto -> bb12;                    // bb9[1]: scope 4 at mir-example.rs:1:10: 1:19
+    }
+
+    bb10: {                             
+        unreachable;                     // bb10[0]: scope 4 at mir-example.rs:1:10: 1:19
+    }
+
+    bb11: {                             
+        _0 = const true;                 // bb11[0]: scope 4 at mir-example.rs:1:10: 1:19
+                                         // ty::Const
+                                         // + ty: bool
+                                         // + val: Scalar(Bits { size: 1, bits: 1 })
+                                         // mir::Constant
+                                         // + span: mir-example.rs:1:10: 1:19
+                                         // + ty: bool
+                                         // + literal: Const { ty: bool, val: Scalar(Bits { size: 1, bits: 1 }) }
+        StorageDead(_15);                // bb11[1]: scope 4 at mir-example.rs:1:18: 1:19
+        goto -> bb12;                    // bb11[2]: scope 4 at mir-example.rs:1:10: 1:19
+    }
+
+    bb12: {                             
+        StorageDead(_11);                // bb12[0]: scope 4 at mir-example.rs:1:18: 1:19
+        StorageDead(_7);                 // bb12[1]: scope 1 at mir-example.rs:1:18: 1:19
+        StorageDead(_3);                 // bb12[2]: scope 0 at mir-example.rs:1:18: 1:19
+        return;                          // bb12[3]: scope 0 at mir-example.rs:1:19: 1:19
+    }
+}

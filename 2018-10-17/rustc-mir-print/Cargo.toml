@@ -1,0 +1,10 @@
+[package]
+
+name = "rustc-test"
+version = "0.0.1"
+readme = "README.md"
+license = "Apache-2.0/MIT"
+
+[[bin]]
+name = "rustc-test"
+path = "src/mod.rs"
